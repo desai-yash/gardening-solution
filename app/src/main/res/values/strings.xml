@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Gardening Solution</string>
+    <string name="signup">SignUp</string>
+    <string name="login">Login</string>
+    <string name="todo">TODO</string>
+
+</resources>
