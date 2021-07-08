@@ -11,7 +11,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Mobileee Number"
+        android:hint="Mobile Number"
         android:textColorHint="@color/black"
         android:gravity="center"
         android:layout_marginTop="170dp"
