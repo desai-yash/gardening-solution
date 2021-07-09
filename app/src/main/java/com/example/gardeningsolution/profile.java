@@ -42,11 +42,6 @@ public class profile extends AppCompatActivity {
         homepage.redirectActivity(this, services.class);
     }
 
-    public void ClickLogout(View view){
-        //close app
-        homepage.logout(this);
-    }
-
     @Override
     protected void onPause() {
         super.onPause();

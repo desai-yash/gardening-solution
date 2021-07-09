@@ -55,10 +55,6 @@ public class services extends AppCompatActivity {
 
     }
 
-    public void ClickLogout(View view){
-        //close app
-        homepage.logout(this);
-    }
 
     @Override
     protected void onPause() {

@@ -1,6 +1,7 @@
 package com.example.gardeningsolution;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -16,6 +17,7 @@ public class homepage extends AppCompatActivity {
     //Initialize variable
     DrawerLayout drawerlayout;
     Button button;
+    CardView card;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,16 @@ public class homepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //Card 1 to new activity
+        card = findViewById(R.id.c1);
+        card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(homepage.this, fertilizers.class);
+                startActivity(intent);
+            }
+        });
+
 
         //Assign variable
         drawerlayout = findViewById(R.id.drawer_layout);
@@ -74,41 +86,6 @@ public class homepage extends AppCompatActivity {
     public void ClickServices(View view){
         //redirect activity
         redirectActivity(this, services.class);
-    }
-
-    public void ClickLogout(View view){
-        //close app
-        logout(this);
-    }
-
-    public static void logout(Activity activity) {
-        //initialize alert dialog
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-
-        //set title
-        builder.setTitle("Logout");
-        //Set message
-        builder.setMessage("Are you sure you want to logout");
-        //positive yes button
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //finish activity
-                activity.finishAffinity();
-                //exit app
-                System.exit(0);
-            }
-        });
-        //negative no button
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //dismiss dialog
-                dialog.dismiss();
-            }
-        });
-        //show dialog
-        builder.show();
     }
 
     public static void redirectActivity(Activity activity, Class aClass) {
