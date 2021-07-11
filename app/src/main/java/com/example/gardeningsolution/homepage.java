@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class homepage extends AppCompatActivity {
     //Initialize variable
@@ -86,6 +87,46 @@ public class homepage extends AppCompatActivity {
     public void ClickServices(View view){
         //redirect activity
         redirectActivity(this, services.class);
+    }
+
+    public void ClickMyBooking(View view){
+        //redirect activity
+        redirectActivity(this, my_booking.class);
+    }
+
+    public void ClickExit(View view){
+        //close app
+        Exit(this);
+    }
+
+    public static void Exit(Activity activity) {
+        //initialize alert dialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+
+        //set title
+        builder.setTitle("Exit App");
+        //Set message
+        builder.setMessage("Are you sure you want to Exit");
+        //positive yes button
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //finish activity
+                activity.finishAffinity();
+                //exit app
+                System.exit(0);
+            }
+        });
+        //negative no button
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //dismiss dialog
+                dialog.dismiss();
+            }
+        });
+        //show dialog
+        builder.show();
     }
 
     public static void redirectActivity(Activity activity, Class aClass) {

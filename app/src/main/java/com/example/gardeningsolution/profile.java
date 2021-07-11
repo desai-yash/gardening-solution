@@ -3,6 +3,9 @@ package com.example.gardeningsolution;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 
@@ -40,6 +43,16 @@ public class profile extends AppCompatActivity {
     public void ClickServices(View view){
         //redirect to Services
         homepage.redirectActivity(this, services.class);
+    }
+
+    public void ClickMyBooking(View view){
+        //redirect to Services
+        homepage.redirectActivity(this, my_booking.class);
+    }
+
+    public void ClickExit(View view){
+        //close app
+        homepage.Exit(this);
     }
 
     @Override

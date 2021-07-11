@@ -3,30 +3,18 @@ package com.example.gardeningsolution;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
-public class services extends AppCompatActivity {
+public class my_booking extends AppCompatActivity {
     //initialize variable
     DrawerLayout drawerLayout;
-    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_services);
-        //button to date picker
-        button = findViewById(R.id.btn4);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(services.this, date_picker.class);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.activity_profile);
 
-        //assign variable
+        //Assign varible
         drawerLayout = findViewById(R.id.drawer_layout);
     }
 
@@ -45,26 +33,19 @@ public class services extends AppCompatActivity {
         homepage.redirectActivity(this, homepage.class );
     }
     public void ClickProfile(View view){
-        //redirect to profile
+        //redirect to Services
         homepage.redirectActivity(this, profile.class);
     }
 
     public void ClickServices(View view){
-        //recreate activity
-        recreate();
-
+        //redirect to Services
+        homepage.redirectActivity(this, services.class);
     }
 
     public void ClickMyBooking(View view){
-        //redirect to Services
-        homepage.redirectActivity(this, my_booking.class);
+       //recreate
+         recreate();
     }
-
-    public void ClickExit(View view){
-        //close app
-        homepage.Exit(this);
-    }
-
 
     @Override
     protected void onPause() {
