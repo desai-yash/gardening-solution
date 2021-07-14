@@ -15,9 +15,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:text="Gardening Solution"
+            android:text="@string/app_name"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:gravity="center"
             android:textColor="#636363"/>
 
@@ -47,13 +47,13 @@
                     android:layout_margin="30dp"
                     android:text="Pick a Date"
                     android:textStyle="bold"
-                    android:textSize="30dp"/>
+                    android:textSize="30sp"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Select Date"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:gravity="center"
                     android:layout_margin="30dp"/>
 

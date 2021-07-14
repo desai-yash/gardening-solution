@@ -17,7 +17,7 @@ public class profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        //Assign varible
+        //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
     }
 

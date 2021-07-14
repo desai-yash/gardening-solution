@@ -12,9 +12,9 @@ public class my_booking extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_my_booking);
 
-        //Assign varible
+        //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
     }
 
@@ -45,6 +45,11 @@ public class my_booking extends AppCompatActivity {
     public void ClickMyBooking(View view){
        //recreate
          recreate();
+    }
+
+    public void ClickExit(View view){
+        //close app
+        homepage.Exit(this);
     }
 
     @Override
