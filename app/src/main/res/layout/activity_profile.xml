@@ -89,9 +89,10 @@
 
 
         <Button
+            android:id="@+id/logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save"
+            android:text="Log Out"
             android:textStyle="bold"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
